@@ -31,7 +31,7 @@ This is a great single-page, single-column **resume template** for tech professi
 
 ## 📋 How to Use  
 
-### Option 2: Clone the repository  
+### Option 1: Clone the repository  
 
 1. **Clone the Repository**:  
    ```bash  
