@@ -1,0 +1,255 @@
+%-------------------------
+% Resume
+% Author : Omar Benzekri
+% Based off of: https://github.com/o-benz/Resume-Template
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+%\usepackage{xcolor}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{verbatim}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{blue}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingDouble}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+
+\begin{document}
+\begin{center}
+    \begin{minipage}{\textwidth}
+    \begin{flushright}
+    % OPTIONAL - Replace with your portfolio website if you have one.
+    \href{https://username.github.io}{\faGlobe}
+    \end{flushright}
+    \end{minipage}
+    \vspace{-27pt}
+    
+    {\textbf{\Huge \scshape FirstName LastName}} \\ 
+    \vspace{2pt}
+    \emph{\textbf{Fluent in Language1, Language2 and Language 3}} \\
+    \vspace{4pt}
+    \small
+    \faPhone\ {+1 123-456-7890} 
+    \textcolor{blue}{$|$}
+    \href{mailto:example@example.com}
+    {\faEnvelope\ \underline{example@example.com}}
+    \textcolor{blue}{$|$}
+    \href{https://www.linkedin.com/in/username/}
+    {\faLinkedin\ \underline{linkedin.com/in/username}}
+    \textcolor{blue}{$|$}
+    \href{https://github.com/username}
+    {\faGithub\  \underline{github.com/username}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------Education-----------
+\section{\textcolor{blue}{Education}}
+    \resumeSubHeadingListStart
+    
+    %\resumeSubheading
+        %{University of Example}{City, State}
+        %{Bachelor's in Example}{September 2000 -- May 3000}
+    
+    \resumeSubheadingDouble
+        {University of Example}{City, State}
+        {Master's in Example}{September 3000 -- May 4000}
+        {Bachelor's in Example}{September 2000 -- December 3000}
+      
+    \resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------
+\section{\textcolor{blue}{Experience}}
+    \resumeSubHeadingListStart
+
+    \resumeSubheading
+        {ABC Inc.}{City, State}
+        {Software Developer (Junior)}{May 4000 -- Present}
+        \resumeItemListStart
+            \resumeItem{Developed and deployed a {service-based system} to improve {feature X} using {Tech 1, Tech 2}, achieving {result Y}.}
+            \resumeItem{Optimized {legacy system} by refactoring {module Z}, reducing {runtime} by {percentage/variable}.}
+            \resumeItem{Collaborated with {department X} to implement {automated pipeline} for {process Y}, increasing {efficiency metric}.}
+        \resumeItemListEnd
+    
+    \resumeSubheading
+        {DEF Inc.}{City, State}
+        {Software Developer (Part-Time)}{September 2800 -- April 2900}
+    \vspace{-5pt}
+    \resumeSubSubheading
+        {Software Developer (Intern)}{May 2800 -- August 2800}
+        \resumeItemListStart
+            \resumeItem{Designed and integrated {RESTful APIs} for {feature X} using {Tech A, Tech B}, enabling seamless {outcome}.}
+            \resumeItem{Built {frontend component/system} using {Framework}, improving user interaction by {metric}.}
+            \resumeItem{Implemented {test suite/monitoring tool} using {Tech Y}, ensuring {performance/reliability goal}.}
+        \resumeItemListEnd
+    
+    \resumeSubheading
+        {GHI Inc.}{City, State}
+        {Data Analyst (Intern)}{May 2750 -- September 2750}
+        \resumeItemListStart
+            \resumeItem{Developed {automated ETL workflows} using {Tech X}, processing {data type} for {specific purpose}.}
+            \resumeItem{Conducted {statistical analysis/modeling} on {dataset type}, providing actionable insights for {business function}.}
+            \resumeItem{Created {interactive dashboards} in {Tool}, improving {stakeholder decision-making metric}.}
+        \resumeItemListEnd
+    
+    \resumeSubheading
+        {University of Example}{City, State}
+        {Teacher Assistant (Part-Time)}{September 2500 -- May 3000}
+        \resumeItemListStart
+            \resumeItem{Assisted in teaching {Course Name}, including designing {assignments/labs} and providing feedback to {students}.}
+            \resumeItem{Created {teaching aids/tools} using {Tech}, improving student comprehension of {topic}.}
+        \resumeItemListEnd
+        \vspace{-5pt}
+        \resumeSubSubheading
+        {Research Assistant (Part-Time)}{January 2225 -- December 2499}
+        \resumeItemListStart
+            \resumeItem{Conducted {research/study type} on {topic}, resulting in {publication/conference participation}.}
+            \resumeItem{Developed {custom software/tool} in {Tech}, enabling {result/outcome}.}
+        \resumeItemListEnd
+        
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{\textcolor{blue}{Projects}}
+    \resumeSubHeadingListStart
+    
+        \resumeProjectHeading
+            {\textbf{Project 3: AI-Powered Chatbot} $|$ \emph{1st Place}}
+            {\textbf{\href{https://github.com/username/example}{Take a look \faLink}}}
+            \resumeItemListStart
+                \resumeItem{Built an {AI chatbot} using {Tech 1, Tech 2}, improving {metric or user engagement} by {X\%}.}
+                \resumeItem{Integrated {natural language processing} for {feature Y}, ensuring {performance/accuracy goal}.}
+            \resumeItemListEnd
+
+        \resumeProjectHeading
+            {\textbf{Project 2: IoT Monitoring System} $|$ \emph{3rd Place}}
+            {\textbf{\href{https://github.com/username/example}{Take a look \faLink}}}
+            \resumeItemListStart
+                \resumeItem{Developed a {real-time monitoring system} for {IoT devices} using {Tech A, Tech B}.}
+                \resumeItem{Designed {data visualization dashboards} with {Tool}, enabling better tracking of {specific metrics}.}
+            \resumeItemListEnd
+
+        \resumeProjectHeading
+            {\textbf{Project 1: Algorithm Optimization Toolkit} $|$ \emph{2nd Place}}
+            {\textbf{\href{https://github.com/username/example}{Take a look \faLink}}}
+            \resumeItemListStart
+                \resumeItem{Created {toolkit/module} in {Tech}, optimizing {algorithm X} for {problem type}.}
+                \resumeItem{Reduced {runtime/complexity} by {X\%} through {specific optimization technique}.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------Technical Skills-----------
+\section{\textcolor{blue}{Technical Skills}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+    \item[]{
+    \textbf{Programming Languages :}
+    \hfill
+    {Language1, Language2, Language3, Language4, Language5} \\
+    \textbf{Cloud Technologies :}
+    \hfill
+    {Technology1, Technology2, Technology3, Technology4, Technology5} \\
+    \textbf{Development Tools :}
+    \hfill
+    {Tool1, Tool2, Tool3, Tool4, Tool5} \\
+
+    }
+    }
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
