@@ -54,7 +54,7 @@ This is a great single-page, single-column **resume template** for tech professi
    - The compiled `.pdf` is your ready-to-use resume!  
 
 ### Option 2: Use Overleaf  
-1. Simply click this link to open the template on Overleaf: [Perfect Tech Resume Template on Overleaf](https://www.overleaf.com/gallery).
+1. Simply click this link to open the template on Overleaf: [Tech Resume Template on Overleaf](https://www.overleaf.com/gallery).
 2. Create a copy of the project to your Overleaf account.  
 3. Edit and compile the resume directly in your browser, no installation needed.  
 
