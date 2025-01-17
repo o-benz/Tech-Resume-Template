@@ -1,12 +1,13 @@
 %-------------------------
 % Resume
 % Author : Omar Benzekri
-% Based off of: https://github.com/o-benz/Resume-Template
+% Based off of: https://github.com/o-benz/Tech-Resume-Template
 % License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
 %\usepackage{xcolor}
+%\usepackage[T1]{fontenc}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -37,6 +38,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
+\setlength{\footskip}{4.08003pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -52,14 +54,17 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{blue}\titlerule \vspace{-5pt}]
+\titleformat{\section}
+  {\vspace{-4pt}\scshape\raggedright\large\color{blue}}
+  {}
+  {0em}
+  {}
+  [\titlerule\vspace{-5pt}]
 
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
+%---------Custom commands---------
+
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -118,7 +123,7 @@
     \end{minipage}
     \vspace{-27pt}
     
-    {\textbf{\Huge \scshape FirstName LastName}} \\ 
+    {\textbf{\Huge FirstName LastName}} \\ 
     \vspace{2pt}
     \emph{\textbf{Fluent in Language1, Language2 and Language 3}} \\
     \vspace{4pt}
