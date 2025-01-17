@@ -31,8 +31,6 @@ This is a great single-page, single-column **resume template** for tech professi
 
 ## 📋 How to Use  
 
-### Option 1: Clone the repository  
-
 1. **Clone the Repository**:  
    ```bash  
    git clone https://github.com/o-benz/Tech-Resume-Template.git  
@@ -40,7 +38,7 @@ This is a great single-page, single-column **resume template** for tech professi
    ```  
 
 2. **Edit the Template**:  
-   - Open the `main.tex` file in your preferred LaTeX editor (e.g., Overleaf, VS Code with LaTeX Workshop).  
+   - Rename the the `LastNameFirstName_CV.tex` file and open it in your preferred LaTeX editor (e.g., Overleaf, VS Code with LaTeX Workshop).  
    - Replace placeholders with your information:  
      - `\name{Your Name}`  
      - `\email{your.email@example.com}`  
@@ -51,12 +49,15 @@ This is a great single-page, single-column **resume template** for tech professi
    - Use a LaTeX compiler (e.g., pdflatex, xelatex, or Overleaf) to generate the PDF.  
 
 4. **Preview and Export**:  
-   - The compiled `.pdf` is your ready-to-use resume!  
+   - The compiled `.pdf` is your ready-to-use resume!
 
+*Note: [Overleaf](https://www.overleaf.com) is highly recommended for this as it is easy to use and simplifies the process.*
+<!--
 ### Option 2: Use Overleaf  
 1. Simply click this link to open the template on Overleaf: [Tech Resume Template on Overleaf](https://www.overleaf.com/gallery).
 2. Create a copy of the project to your Overleaf account.  
 3. Edit and compile the resume directly in your browser, no installation needed.  
+-->
 
 ---
 
