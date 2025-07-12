@@ -1,8 +1,8 @@
-# 📝 Tech Resume Template  
+# Tech Resume Template  
 
 ![Resume Preview](LastNameFirstName_CV.png)  
 
-## 🚀 Overview  
+## Overview  
 
 This is a great single-page, single-column **resume template** for tech professionals, designed with efficiency, clarity, and customization in mind. Whether you're a software engineer, data scientist, or computer engineer, this LaTeX-based resume format helps you showcase your **education**, **experience**, **projects**, and **skills** in a concise yet impactful way.  
 
@@ -14,7 +14,7 @@ This is a great single-page, single-column **resume template** for tech professi
 
 ---
 
-## 📂 Template Features  
+## Template Features  
 
 ### Sections Included  
 1. **Education**: Clearly document your academic background and achievements.  
@@ -29,7 +29,7 @@ This is a great single-page, single-column **resume template** for tech professi
 
 ---
 
-## 📋 How to Use  
+## How to Use  
 
 1. **Clone the Repository**:  
    ```bash  
@@ -61,7 +61,7 @@ This is a great single-page, single-column **resume template** for tech professi
 
 ---
 
-## 💡 Tips for Optimization  
+## Tips for Optimization  
 
 - **Be Specific**: Use metrics and outcomes wherever possible (e.g., "Improved API response time by 30%").  
 - **Tailor for Roles**: Customize your resume for each application by rearranging or emphasizing relevant sections.  
@@ -69,13 +69,13 @@ This is a great single-page, single-column **resume template** for tech professi
 
 ---
 
-## 🤝 Contributing  
+## Contributing  
 
 Have suggestions or want to add new features? Feel free to submit an issue or pull request. Contributions are always welcome!  
 
 ---
 
-## 🌟 Support the Project  
+## Support the Project  
 
 If you find this template useful, please consider:  
 - **Starring this repository**: If you like this project, please give it a ⭐ to help others discover it.  
@@ -85,7 +85,7 @@ Your support helps in maintaining and improving the project!
 
 ---
 
-## 📄 License  
+## License  
 
 This project is licensed under the [MIT License](LICENSE), so feel free to use, modify, and share it as you like.  
 

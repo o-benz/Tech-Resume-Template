@@ -95,10 +95,17 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+\newcommand{\resumeProjectHeading}[3]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small\textbf{#1} $|$ \emph{#2} & \textbf{\href{#3}{Take a look \faLink}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeadingSimple}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} $|$ \emph{#2} & \textbf{\href{#3}{Take a look \faLink}} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -110,6 +117,11 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{-5pt}\vspace{-3.5pt}}
+
+\newcommand{\skillCategory}[2]{
+    \textbf{#1 :} \hfill {#2} \\
+}
 
 %-------------------------------------------
 
@@ -211,28 +223,28 @@
     \resumeSubHeadingListStart
     
         \resumeProjectHeading
-            {\textbf{Project 3: AI-Powered Chatbot} $|$ \emph{1st Place}}
-            {\textbf{\href{https://github.com/username/example}{Take a look \faLink}}}
+            {Project 3: AI-Powered Chatbot}{1st Place}
+            {https://github.com/username/example}
             \resumeItemListStart
                 \resumeItem{Built an {AI chatbot} using {Tech 1, Tech 2}, improving {metric or user engagement} by {X\%}.}
                 \resumeItem{Integrated {natural language processing} for {feature Y}, ensuring {performance/accuracy goal}.}
-            \resumeItemListEnd
+            \resumeProjectItemListEnd
 
         \resumeProjectHeading
-            {\textbf{Project 2: IoT Monitoring System} $|$ \emph{3rd Place}}
-            {\textbf{\href{https://github.com/username/example}{Take a look \faLink}}}
+            {Project 2: IoT Monitoring System}{3rd Place}
+            {https://github.com/username/example}
             \resumeItemListStart
                 \resumeItem{Developed a {real-time monitoring system} for {IoT devices} using {Tech A, Tech B}.}
                 \resumeItem{Designed {data visualization dashboards} with {Tool}, enabling better tracking of {specific metrics}.}
-            \resumeItemListEnd
+            \resumeProjectItemListEnd
 
         \resumeProjectHeading
-            {\textbf{Project 1: Algorithm Optimization Toolkit} $|$ \emph{2nd Place}}
-            {\textbf{\href{https://github.com/username/example}{Take a look \faLink}}}
+            {Project 1: Algorithm Optimization Toolkit}{2nd Place}
+            {https://github.com/username/example}
             \resumeItemListStart
                 \resumeItem{Created {toolkit/module} in {Tech}, optimizing {algorithm X} for {problem type}.}
                 \resumeItem{Reduced {runtime/complexity} by {X\%} through {specific optimization technique}.}
-            \resumeItemListEnd
+            \resumeProjectItemListEnd
     \resumeSubHeadingListEnd
 
 
@@ -241,16 +253,9 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{
     \item[]{
-    \textbf{Programming Languages :}
-    \hfill
-    {Language1, Language2, Language3, Language4, Language5} \\
-    \textbf{Cloud Technologies :}
-    \hfill
-    {Technology1, Technology2, Technology3, Technology4, Technology5} \\
-    \textbf{Development Tools :}
-    \hfill
-    {Tool1, Tool2, Tool3, Tool4, Tool5} \\
-
+    \skillCategory{Programming Languages}{Language1, Language2, Language3, Language4, Language5}
+    \skillCategory{Cloud Technologies}{Technology1, Technology2, Technology3, Technology4, Technology5}
+    \skillCategory{Development Tools}{Tool1, Tool2, Tool3, Tool4, Tool5}
     }
     }
  \end{itemize}
