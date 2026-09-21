@@ -6,21 +6,72 @@
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
-%\usepackage{xcolor}
-%\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-%\usepackage{verbatim}
 \usepackage{fontawesome5}
+\usepackage{graphicx}
+
+% Optically scale FontAwesome icons so their tops align with text cap-height/ascenders
+\newcommand{\faIconAdjust}[1]{\scalebox{0.83}{#1}}
+
+\let\oldfaGlobe\faGlobe
+\renewcommand{\faGlobe}{\faIconAdjust{\oldfaGlobe}}
+
+\let\oldfaPhone\faPhone
+\renewcommand{\faPhone}{\faIconAdjust{\oldfaPhone}}
+
+\let\oldfaEnvelope\faEnvelope
+\renewcommand{\faEnvelope}{\faIconAdjust{\oldfaEnvelope}}
+
+\let\oldfaLinkedin\faLinkedin
+\renewcommand{\faLinkedin}{\faIconAdjust{\oldfaLinkedin}}
+
+\let\oldfaGithub\faGithub
+\renewcommand{\faGithub}{\faIconAdjust{\oldfaGithub}}
+
+\let\oldfaLink\faLink
+\renewcommand{\faLink}{\faIconAdjust{\oldfaLink}}
+
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+
 \input{glyphtounicode}
+\pdfgentounicode=1
+
+% Map FontAwesome glyph names to space (0020) so ATS/clipboard copies clean spaces instead of junk characters
+\pdfglyphtounicode{globe}{0020}
+\pdfglyphtounicode{globe-americas}{0020}
+\pdfglyphtounicode{uniF0AC}{0020}
+\pdfglyphtounicode{uniF57D}{0020}
+
+\pdfglyphtounicode{phone}{0020}
+\pdfglyphtounicode{phone-alt}{0020}
+\pdfglyphtounicode{uniF095}{0020}
+\pdfglyphtounicode{uniF879}{0020}
+
+\pdfglyphtounicode{envelope}{0020}
+\pdfglyphtounicode{uniF0E0}{0020}
+
+\pdfglyphtounicode{linkedin}{0020}
+\pdfglyphtounicode{linkedin-in}{0020}
+\pdfglyphtounicode{uniF08C}{0020}
+\pdfglyphtounicode{uniF0E1}{0020}
+
+\pdfglyphtounicode{github}{0020}
+\pdfglyphtounicode{github-alt}{0020}
+\pdfglyphtounicode{uniF09B}{0020}
+\pdfglyphtounicode{uniF113}{0020}
+
+\pdfglyphtounicode{link}{0020}
+\pdfglyphtounicode{uniF0C1}{0020}
 
 
 %----------FONT OPTIONS----------
@@ -61,8 +112,6 @@
   {}
   [\titlerule\vspace{-5pt}]
 
-\pdfgentounicode=1
-
 %---------Custom commands---------
 
 \newcommand{\resumeItem}[1]{
@@ -95,18 +144,30 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[3]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small\textbf{#1} $|$ \emph{#2} & \textbf{\href{#3}{Take a look \faLink}} \\
-    \end{tabular*}\vspace{-7pt}
+% Multi-bullet project heading (displays custom link text on the right)
+\newcommand{\resumeProjectHeading}[4]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small\textbf{#1} $|$ \emph{#2} & \small\href{#3}{#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+% Alternative: Single-line concise project entry (no bullets)
+\newcommand{\resumeProjectEntry}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} $|$ \emph{#2} & \small\href{#3}{#4} \\
+    \end{tabular*}\vspace{-3pt}
+    \begin{flushleft}\vspace{-4pt}
+      \small{#5}
+    \end{flushleft}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeadingSimple}[3]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small\textbf{#1} $|$ \emph{#2} & \textbf{\href{#3}{Take a look \faLink}} \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small\textbf{#1} $|$ \emph{#2} & \textbf{\href{#3}{\faLink}} \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -118,24 +179,29 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{-5pt}\vspace{-3.5pt}}
+\newcommand{\resumeItemListEndNoSpace}{\end{itemize}\vspace{-5pt}}
 
+% Technical skills formatting command
 \newcommand{\skillCategory}[2]{
-    \textbf{#1 :} \hfill {#2} \\
+  \textbf{#1:} \hfill {#2} \\
 }
 
 %-------------------------------------------
 
 \begin{document}
 \begin{center}
-    \begin{minipage}{\textwidth}
-    \begin{flushright}
-    % OPTIONAL - Replace with your portfolio website if you have one.
-    \href{https://username.github.io}{\faGlobe}
-    \end{flushright}
-    \end{minipage}
-    \vspace{-27pt}
-    
-    {\textbf{\Huge FirstName LastName}} \\ 
+    % PORTFOLIO WEBSITE OPTION:
+    % - To keep the portfolio link: update both URLs and the username text below.
+    % - To remove the portfolio link WITHOUT breaking centering: delete or comment out the \makebox block
+    %   and uncomment the line below:
+    % {\textbf{\Huge FirstName LastName}} \\
+    \makebox[\textwidth]{%
+        \phantom{\raisebox{2pt}{\small\faGlobe\ \underline{\vphantom{g}username.github.io}}}%
+        \hfill
+        {\textbf{\Huge FirstName LastName}}%
+        \hfill
+        \href{https://username.github.io}{\raisebox{2pt}{\small\faGlobe\ \underline{\vphantom{g}username.github.io}}}%
+    } \\ 
     \vspace{2pt}
     \emph{\textbf{Fluent in Language1, Language2 and Language 3}} \\
     \vspace{4pt}
@@ -149,7 +215,7 @@
     {\faLinkedin\ \underline{linkedin.com/in/username}}
     \textcolor{blue}{$|$}
     \href{https://github.com/username}
-    {\faGithub\  \underline{github.com/username}}
+    {\faGithub\ \underline{github.com/username}}
     \vspace{-8pt}
 \end{center}
 
@@ -167,6 +233,7 @@
         {Bachelor's in Example}{September 2000 -- December 3000}
       
     \resumeSubHeadingListEnd
+
 %-----------EXPERIENCE-----------
 \section{Experience}
     \resumeSubHeadingListStart
@@ -225,6 +292,7 @@
         \resumeProjectHeading
             {Project 3: AI-Powered Chatbot}{1st Place}
             {https://github.com/username/example}
+            {\faGithub\ \underline{github.com/username/example}}
             \resumeItemListStart
                 \resumeItem{Built an {AI chatbot} using {Tech 1, Tech 2}, improving {metric or user engagement} by {X\%}.}
                 \resumeItem{Integrated {natural language processing} for {feature Y}, ensuring {performance/accuracy goal}.}
@@ -233,6 +301,7 @@
         \resumeProjectHeading
             {Project 2: IoT Monitoring System}{3rd Place}
             {https://github.com/username/example}
+            {\faGithub\ \underline{github.com/username/example}}
             \resumeItemListStart
                 \resumeItem{Developed a {real-time monitoring system} for {IoT devices} using {Tech A, Tech B}.}
                 \resumeItem{Designed {data visualization dashboards} with {Tool}, enabling better tracking of {specific metrics}.}
@@ -241,12 +310,12 @@
         \resumeProjectHeading
             {Project 1: Algorithm Optimization Toolkit}{2nd Place}
             {https://github.com/username/example}
+            {\faGithub\ \underline{github.com/username/example}}
             \resumeItemListStart
                 \resumeItem{Created {toolkit/module} in {Tech}, optimizing {algorithm X} for {problem type}.}
                 \resumeItem{Reduced {runtime/complexity} by {X\%} through {specific optimization technique}.}
             \resumeProjectItemListEnd
     \resumeSubHeadingListEnd
-
 
 %-----------Technical Skills-----------
 \section{Technical Skills}
@@ -259,7 +328,6 @@
     }
     }
  \end{itemize}
-
 
 %-------------------------------------------
 \end{document}
