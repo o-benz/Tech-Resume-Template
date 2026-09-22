@@ -1,10 +1,18 @@
-# Tech Resume Template
+<div align="center">
+  <h1>Tech Resume Template</h1>
+  <p>A modern, battle-tested, single-page software engineering resume template built with LaTeX.</p>
 
-![Resume Preview](LastNameFirstName_CV.png)
+  <p>
+    <a href="https://github.com/o-benz/Tech-Resume-Template/stargazers"><img src="https://img.shields.io/github/stars/o-benz/Tech-Resume-Template?style=flat-square" alt="Stars Badge"/></a>
+    <a href="https://github.com/o-benz/Tech-Resume-Template/network/members"><img src="https://img.shields.io/github/forks/o-benz/Tech-Resume-Template?style=flat-square" alt="Forks Badge"/></a>
+    <a href="https://github.com/o-benz/Tech-Resume-Template/blob/main/LICENSE"><img src="https://img.shields.io/github/license/o-benz/Tech-Resume-Template?style=flat-square" alt="License Badge"/></a>
+  </p>
 
-## Overview
-
-This is a great single-page, single-column **resume template** for tech professionals, designed with efficiency, clarity, and customization in mind. Whether you're a software engineer, data scientist, UX designer, or product owner, this LaTeX-based resume format helps you showcase yourself in a concise yet impactful way.
+  <!-- Centered Preview Image -->
+  <p align="center">
+    <img src="https://github.com/user-attachments/assets/960c1a5b-5f12-4b61-bae5-bbb1232e161d" alt="Resume Preview" width="650" style="max-width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 4px;" />
+  </p>
+</div>
 
 ---
 
@@ -33,7 +41,9 @@ This is a great single-page, single-column **resume template** for tech professi
      - Update each section with your details.
 
 3. **Compile the Resume**:
-   - Use a LaTeX compiler (e.g., pdflatex, xelatex, or Overleaf) to generate the PDF.
+   - e.g: using **pdfLaTeX**
+   ```bash
+   pdflatex LastNameFirstName_CV.tex
 
 4. **Preview and Export**:
    - The compiled `.pdf` is your ready-to-use resume!
